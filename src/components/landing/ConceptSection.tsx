@@ -8,13 +8,13 @@ export const ConceptSection: React.FC = () => {
         {/* Section Header */}
         <div className="flex flex-col items-center text-center max-w-[760px] mx-auto mb-12">
           <span className="text-[11px] uppercase tracking-[0.25em] text-[#edbd9b] font-medium mb-2">
-            La Esencia de Alzza
+            La Esencia de Elevva
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#eae1dc] tracking-tight">
             Un homenaje a la noche, la técnica y los sentidos
           </h2>
           <p className="text-[#e0bfbf] text-sm sm:text-base mt-3 leading-relaxed font-light">
-            Ubicado en el epicentro cosmopolita de Encarnación, Alzza nace para resignificar el ritual de la sobremesa y el after-office. Diseñamos atmósferas que provocan el asombro.
+            Ubicado en el epicentro cosmopolita de Encarnación, Elevva nace para resignificar el ritual de la sobremesa y el after-office. Diseñamos atmósferas que provocan el asombro.
           </p>
         </div>
 

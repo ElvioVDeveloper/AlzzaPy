@@ -21,7 +21,7 @@ export async function checkAndSeedInitialProducts(): Promise<void> {
     const colRef = collection(db, PRODUCTS_COLLECTION);
     const snapshot = await getDocs(colRef);
     if (snapshot.empty) {
-      console.log('Alzza database empty. Seeding signature items...');
+      console.log('Elevva database empty. Seeding signature items...');
       for (const item of INITIAL_PRODUCTS) {
         const { id, ...data } = item;
         await addDoc(colRef, {

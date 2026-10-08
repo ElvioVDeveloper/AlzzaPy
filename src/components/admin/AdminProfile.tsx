@@ -34,7 +34,7 @@ export const AdminProfile: React.FC<AdminProfileProps> = ({ onLogout }) => {
           <div className="space-y-1">
             <div className="flex items-center gap-3">
               <h2 className="font-serif text-2xl text-[#eae1dc] font-semibold">
-                {adminData?.name || user?.displayName || 'Administrador Alzza'}
+                {adminData?.name || user?.displayName || 'Administrador Elevva'}
               </h2>
               <span className="px-3 py-0.5 rounded-full bg-[#613f26] text-[#ffdcc4] text-[10px] uppercase tracking-widest font-semibold border border-[#edbd9b]/30">
                 {adminData?.role || 'Socio'}

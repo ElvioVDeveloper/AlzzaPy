@@ -17,7 +17,7 @@ function getFormattedCurrentDate(): string {
 }
 
 /**
- * Generates and downloads a luxury branded PDF of Alzza's full menu.
+ * Generates and downloads a luxury branded PDF of Elevva's full menu.
  */
 export async function generateMenuPDF(
   products: Product[],
@@ -59,7 +59,7 @@ export async function generateMenuPDF(
   const contentWidth = pageWidth - marginX * 2;
   const bottomMargin = 22;
 
-  // Alzza Luxury Palette
+  // Elevva Luxury Palette
   const COLOR_WINE = [43, 11, 23] as const; // #2B0B17
   const COLOR_COPPER = [200, 155, 123] as const; // #C89B7B
   const COLOR_GOLD = [184, 134, 76] as const; // #B8864C
@@ -84,7 +84,7 @@ export async function generateMenuPDF(
       doc.setFont('times', 'bold');
       doc.setFontSize(10);
       doc.setTextColor(...COLOR_WINE);
-      doc.text('ALZZA', marginX, 12);
+      doc.text('ELEVVA', marginX, 12);
 
       doc.setFont('helvetica', 'normal');
       doc.setFontSize(8);
@@ -126,11 +126,11 @@ export async function generateMenuPDF(
   doc.setLineWidth(0.2);
   doc.roundedRect(marginX + 1.5, currentY + 1.5, contentWidth - 3, 35, 1.5, 1.5, 'S');
 
-  // Brand Title: ALZZA in luxury serif typography
+  // Brand Title: ELEVVA in luxury serif typography
   doc.setFont('times', 'bold');
   doc.setFontSize(26);
   doc.setTextColor(...COLOR_WINE);
-  doc.text('A  L  Z  Z  A', pageWidth / 2, currentY + 12, { align: 'center' });
+  doc.text('E  L  E  V  V  A', pageWidth / 2, currentY + 12, { align: 'center' });
 
   // Subtitle: "Gastronomía & Coctelería de Altura | Shopping de Encarnación"
   doc.setFont('times', 'italic');
@@ -210,7 +210,7 @@ export async function generateMenuPDF(
 
     // RENDER ITEMS IN THIS CATEGORY
     for (const item of categoryProducts) {
-      const name = item.name || item.nombre || 'Creación Alzza';
+      const name = item.name || item.nombre || 'Creación Elevva';
       const rawPrice = item.price || item.precio || '';
       const desc = item.description || item.descripcion || '';
       const badge = item.badge || (item.tag ? item.tag : '');
@@ -232,7 +232,7 @@ export async function generateMenuPDF(
 
       const nameWidth = doc.getTextWidth(name);
 
-      // Distinct Badge Indicator ("Firma Alzza", "Recomendado", etc.)
+      // Distinct Badge Indicator ("Firma Elevva", "Recomendado", etc.)
       let badgeOffset = marginX + nameWidth + 2.5;
       if (badge) {
         doc.setFillColor(245, 237, 230);
@@ -312,7 +312,7 @@ export async function generateMenuPDF(
     doc.setFontSize(7.5);
     doc.setTextColor(...COLOR_MUTED);
     doc.text(
-      'Shopping de Encarnación  •  WhatsApp: +595 985 100 935  •  Instagram: @alzza.py',
+      'Shopping de Encarnación  •  WhatsApp: +595 985 100 935  •  Instagram: @elevva.py',
       marginX,
       footerY
     );
@@ -323,6 +323,6 @@ export async function generateMenuPDF(
   }
 
   // Trigger browser download
-  const filename = 'Carta_Alzza_Gastronomia_Cocteleria.pdf';
+  const filename = 'Carta_Elevva_Gastronomia_Cocteleria.pdf';
   doc.save(filename);
 }

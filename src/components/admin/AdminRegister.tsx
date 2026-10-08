@@ -57,12 +57,17 @@ export const AdminRegister: React.FC<AdminRegisterProps> = ({ onNavigate }) => {
         </button>
 
         <div className="text-center mb-6">
-          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#2e2926] border border-[#C89B7B]/40 text-[#edbd9b] mb-4 shadow-lg">
-            <UserPlus className="w-7 h-7" />
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#2e2926] border border-[#C89B7B]/40 mb-4 shadow-xl overflow-hidden p-1">
+            <img
+              src="/src/assets/images/elevva_logo_emblem_1791482529055.jpg"
+              alt="Elevva"
+              referrerPolicy="no-referrer"
+              className="w-full h-full rounded-xl object-cover"
+            />
           </div>
           <h1 className="font-serif text-3xl text-[#eae1dc] font-semibold">Registro de Socio</h1>
           <p className="text-xs uppercase tracking-widest text-[#edbd9b] mt-1 font-medium">
-            Alzza Rooftop Experience
+            Elevva Rooftop Experience
           </p>
           <p className="text-xs text-[#e0bfbf] mt-2">
             Crea tu credencial autorizada para gestionar la plataforma comercial.
@@ -104,7 +109,7 @@ export const AdminRegister: React.FC<AdminRegisterProps> = ({ onNavigate }) => {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="socio@alzza.com.py"
+                placeholder="socio@elevva.com.py"
                 className="w-full pl-10 pr-4 py-3 rounded-xl bg-[#171310] border border-[#584141]/50 text-[#eae1dc] placeholder-[#584141] focus:outline-none focus:border-[#edbd9b] text-sm"
               />
               <Mail className="w-4 h-4 text-[#584141] absolute left-3.5 top-3.5" />

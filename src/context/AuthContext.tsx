@@ -35,7 +35,7 @@ export const DEVELOPER_CREDENTIALS = {
   email: 'developer@developer.com',
   password: 'developer',
   role: 'superadmin' as const,
-  id: 'developer-alzza-uid',
+  id: 'developer-elevva-uid',
 };
 
 function createSimulatedUser(id: string, email: string, name: string): User {
@@ -93,7 +93,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         // Automatically bootstrap initial administrator profile
         const newAdmin: AdminUser = {
           id: firebaseUser.uid,
-          name: customName || firebaseUser.displayName || (firebaseUser.email?.toLowerCase() === DEVELOPER_CREDENTIALS.email ? 'Developer' : 'Administrador Alzza'),
+          name: customName || firebaseUser.displayName || (firebaseUser.email?.toLowerCase() === DEVELOPER_CREDENTIALS.email ? 'Developer' : 'Administrador Elevva'),
           email: firebaseUser.email || '',
           role: 'superadmin',
           createdAt: new Date().toISOString(),
@@ -105,7 +105,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         // Any registered admin partner
         const newPartner: AdminUser = {
           id: firebaseUser.uid,
-          name: customName || firebaseUser.displayName || 'Socio Alzza',
+          name: customName || firebaseUser.displayName || 'Socio Elevva',
           email: firebaseUser.email || '',
           role: 'admin',
           createdAt: new Date().toISOString(),
@@ -125,7 +125,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         setIsAdmin(true);
         setAdminData({
           id: firebaseUser.uid,
-          name: firebaseUser.displayName || (firebaseUser.email?.toLowerCase() === DEVELOPER_CREDENTIALS.email ? 'Developer' : 'Administrador Alzza'),
+          name: firebaseUser.displayName || (firebaseUser.email?.toLowerCase() === DEVELOPER_CREDENTIALS.email ? 'Developer' : 'Administrador Elevva'),
           email: firebaseUser.email || '',
           role: 'superadmin',
           createdAt: new Date().toISOString(),
@@ -136,7 +136,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   useEffect(() => {
     // Check local developer session first
-    const savedDevSession = localStorage.getItem('alzza_developer_session');
+    const savedDevSession = localStorage.getItem('elevva_developer_session');
     if (savedDevSession) {
       try {
         const parsed = JSON.parse(savedDevSession);
@@ -157,7 +157,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         await syncAdminRecord(currentUser);
       } else {
         // If no firebase user, double check developer session
-        const devSession = localStorage.getItem('alzza_developer_session');
+        const devSession = localStorage.getItem('elevva_developer_session');
         if (devSession) {
           try {
             const parsed = JSON.parse(devSession);
@@ -232,7 +232,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       setAdminData(devAdmin);
       setIsAdmin(true);
       localStorage.setItem(
-        'alzza_developer_session',
+        'elevva_developer_session',
         JSON.stringify({
           user: {
             uid: devSimUser.uid,
@@ -306,7 +306,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       setAdminData(devAdmin);
       setIsAdmin(true);
       localStorage.setItem(
-        'alzza_developer_session',
+        'elevva_developer_session',
         JSON.stringify({
           user: {
             uid: devSimUser.uid,
@@ -346,7 +346,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const logout = async () => {
     setError(null);
     try {
-      localStorage.removeItem('alzza_developer_session');
+      localStorage.removeItem('elevva_developer_session');
       await signOut(auth);
       setUser(null);
       setAdminData(null);

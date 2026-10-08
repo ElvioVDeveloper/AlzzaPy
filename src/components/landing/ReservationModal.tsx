@@ -29,7 +29,7 @@ export const ReservationModal: React.FC<ReservationModalProps> = ({
     e.preventDefault();
 
     const formattedMessage = encodeURIComponent(
-      `*SOLICITUD DE RESERVA - ALZZA*\n` +
+      `*SOLICITUD DE RESERVA - ELEVVA*\n` +
       `👤 *Nombre:* ${formData.fullName}\n` +
       `📱 *Teléfono:* ${formData.phone}\n` +
       `📅 *Fecha:* ${formData.date}\n` +
@@ -37,7 +37,7 @@ export const ReservationModal: React.FC<ReservationModalProps> = ({
       `👥 *Comensales:* ${formData.guests} personas\n` +
       `📍 *Sector deseado:* ${formData.zone}\n` +
       (formData.specialRequests ? `📝 *Observaciones:* ${formData.specialRequests}\n` : '') +
-      `\nEnviado desde la Web Alzza.`
+      `\nEnviado desde la Web Elevva.`
     );
 
     window.open(`https://wa.me/595985100935?text=${formattedMessage}`, '_blank');
@@ -183,7 +183,7 @@ export const ReservationModal: React.FC<ReservationModalProps> = ({
               <span>Confirmar Reserva por WhatsApp Concierge</span>
             </button>
             <p className="text-[10px] text-center text-[#e0bfbf]/70 mt-2">
-              Se enviará la confirmación directamente a nuestro concierge de Alzza Encarnación.
+              Se enviará la confirmación directamente a nuestro concierge de Elevva Encarnación.
             </p>
           </div>
         </form>

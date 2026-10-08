@@ -119,6 +119,26 @@ function AppContent() {
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
+  // Ensure browser tab title always displays Elevva
+  useEffect(() => {
+    let tabTitle = 'Elevva | Gastronomía & Coctelería de Altura';
+    if (currentPath === '/admin/login') {
+      tabTitle = 'Elevva | Iniciar Sesión';
+    } else if (currentPath === '/admin/register') {
+      tabTitle = 'Elevva | Registro de Socio';
+    } else if (currentPath.startsWith('/admin')) {
+      tabTitle = 'Elevva | Panel de Administración';
+    }
+    document.title = tabTitle;
+    try {
+      if (window.top && window.top !== window) {
+        window.top.document.title = tabTitle;
+      }
+    } catch {
+      // Ignore cross-origin iframe security restriction
+    }
+  }, [currentPath]);
+
   // Initialize and subscribe to products & categories in Firestore
   useEffect(() => {
     // Attempt seed if catalog and categories are empty
@@ -391,7 +411,7 @@ function AppContent() {
         <div className="min-h-screen bg-[#110d0b] flex items-center justify-center text-[#edbd9b]">
           <div className="flex flex-col items-center gap-3">
             <div className="w-8 h-8 border-2 border-[#edbd9b] border-t-transparent rounded-full animate-spin"></div>
-            <p className="font-serif text-lg">Cargando portal Alzza...</p>
+            <p className="font-serif text-lg">Cargando portal Elevva...</p>
           </div>
         </div>
       );

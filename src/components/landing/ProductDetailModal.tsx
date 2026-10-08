@@ -22,7 +22,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
   const productImage = product.image || product.imagen || '';
 
   const whatsappMessage = encodeURIComponent(
-    `Hola Alzza Encarnación, deseo consultar disponibilidad y reservar una mesa para degustar su creación "${productName}" (${productPrice}).`
+    `Hola Elevva Encarnación, deseo consultar disponibilidad y reservar una mesa para degustar su creación "${productName}" (${productPrice}).`
   );
 
   return (

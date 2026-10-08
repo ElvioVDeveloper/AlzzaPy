@@ -37,7 +37,7 @@ export async function checkAndSeedInitialCategories(): Promise<void> {
     const colRef = collection(db, CATEGORIES_COLLECTION);
     const snapshot = await getDocs(colRef);
     if (snapshot.empty) {
-      console.log('Alzza categories collection empty. Seeding default categories...');
+      console.log('Elevva categories collection empty. Seeding default categories...');
       for (const cat of DEFAULT_CATEGORIES) {
         const { id, ...data } = cat;
         await addDoc(colRef, {

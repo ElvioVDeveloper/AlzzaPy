@@ -17,8 +17,8 @@ export const EventsSection: React.FC = () => {
               </span>
 
               <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#eae1dc] tracking-tight leading-tight">
-                Noches Alzza: <br />
-                <span className="italic text-[#edbd9b]">“Alzza Florece”</span> &amp; DJ Sessions
+                Noches Elevva: <br />
+                <span className="italic text-[#edbd9b]">“Elevva Florece”</span> &amp; DJ Sessions
               </h2>
 
               <div className="flex items-center gap-2 text-[#edbd9b] text-xs sm:text-sm font-medium">
@@ -32,7 +32,7 @@ export const EventsSection: React.FC = () => {
 
               <div className="pt-2">
                 <a
-                  href="https://wa.me/595985100935?text=Hola%20Alzza,%20deseo%20consultar%20fechas%20y%20reservar%20para%20las%20Noches%20Especiales"
+                  href="https://wa.me/595985100935?text=Hola%20Elevva,%20deseo%20consultar%20fechas%20y%20reservar%20para%20las%20Noches%20Especiales"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-lg bg-[#9b1b30] text-white text-[12px] uppercase tracking-wider font-semibold shadow-lg hover:bg-[#b8243c] transition-all"
@@ -46,7 +46,7 @@ export const EventsSection: React.FC = () => {
             <div className="lg:col-span-5 relative">
               <div className="relative w-full h-[300px] sm:h-[380px] rounded-2xl overflow-hidden border border-[#C89B7B]/30 shadow-2xl">
                 <img
-                  alt="Noche sensorial en Alzza Encarnación"
+                  alt="Noche sensorial en Elevva Encarnación"
                   className="w-full h-full object-cover"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQGWDloyJrhsyyH6-t-s94N9jkJtrdEb8-FtPN2u3OgsfYS22jOZ7ssR4S76-uSAodvOmFsTmXL80SreyeKXH85RoP6EG9n79NxD5RUf9VVMiwupjUmZTHPyWckf84UDdimu2nDlsvTB11We3UzOt7EzbDopY2choUPewBJBSkEEXH_hF_uRVpvGsJMTRlaKgoUV8ZMtYRhXwGE0Oo2krnJYYgdTEchU0k5qVWY0CcVM4eVkHMqQs"
                 />

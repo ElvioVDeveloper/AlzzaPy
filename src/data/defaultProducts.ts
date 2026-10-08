@@ -3,9 +3,9 @@ import { Product } from '../types';
 export const INITIAL_PRODUCTS: Product[] = [
   // 1. COCTELERÍA DE AUTOR (3)
   {
-    id: 'prod-negroni-alzza',
-    name: 'Negroni Ahumado Alzza',
-    nombre: 'Negroni Ahumado Alzza',
+    id: 'prod-negroni-elevva',
+    name: 'Negroni Ahumado Elevva',
+    nombre: 'Negroni Ahumado Elevva',
     description: 'Gin macerado con botánicos silvestres, vermut rosso reserva y Campari infusionado en madera noble, servido bajo campana de humo aromático de roble flameado al instante en mesa.',
     descripcion: 'Gin macerado con botánicos silvestres, vermut rosso reserva y Campari infusionado en madera noble, servido bajo campana de humo aromático de roble flameado al instante en mesa.',
     price: 'Gs. 55.000',
@@ -16,7 +16,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     categoria: 'Coctelería de Autor',
     status: 'activo',
     activo: true,
-    badge: 'Firma Alzza',
+    badge: 'Firma Elevva',
     tag: 'Ahumado & Especiado',
     createdAt: '2026-01-01T00:00:00.000Z',
     updatedAt: '2026-01-01T00:00:00.000Z',
@@ -121,9 +121,9 @@ export const INITIAL_PRODUCTS: Product[] = [
 
   // 3. PLATOS PRINCIPALES (3)
   {
-    id: 'prod-bife-chorizo-alzza',
-    name: 'Bife de Chorizo Alzza',
-    nombre: 'Bife de Chorizo Alzza',
+    id: 'prod-bife-chorizo-elevva',
+    name: 'Bife de Chorizo Elevva',
+    nombre: 'Bife de Chorizo Elevva',
     description: 'Corte noble de raza Angus madurado en seco 28 días, sellado a la brasa con costra de manteca de hierbas, puré trufado de coliflor y espárragos grillados con demi-glace.',
     descripcion: 'Corte noble de raza Angus madurado en seco 28 días, sellado a la brasa con costra de manteca de hierbas, puré trufado de coliflor y espárragos grillados con demi-glace.',
     price: 'Gs. 115.000',
@@ -304,7 +304,7 @@ export const GALLERY_PRESETS = [
     url: 'https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=1000&q=80',
   },
   {
-    name: 'Bife de Chorizo Alzza',
+    name: 'Bife de Chorizo Elevva',
     url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAtatgFmbP_WTmor3dN3BChaNYBqHWWsJk8fgrBN_Bh3095bPbiEfOBHPUJZs10QzT2tAuWAEi-QXV-EuNsAuCpnQpUBhA3SYW1QrgJtUqNEnpJT3RlZJdJms13gLF2S39fnLN7aEpl4ya1BVpptUyqUinBQgrppNG2dEloCXVOhey2NteLwNzMKaguBdjxMT6aVgD9Zt640QsbFpqmOlmH0fVNnSThmLHONxG06bmI7e9ptHF-jxo',
   },
   {

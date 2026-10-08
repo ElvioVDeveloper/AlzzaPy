@@ -45,8 +45,14 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
     <div className="min-h-screen bg-[#110d0b] text-[#eae1dc] flex flex-col md:flex-row">
       {/* Mobile Topbar */}
       <div className="md:hidden bg-[#1f1b18] border-b border-[#584141]/40 px-4 py-3 flex items-center justify-between sticky top-0 z-40">
-        <div className="flex items-center gap-2">
-          <span className="font-serif text-xl text-[#edbd9b] font-medium">Alzza</span>
+        <div className="flex items-center gap-2.5">
+          <img
+            src="/src/assets/images/elevva_logo_emblem_1791482529055.jpg"
+            alt="Elevva Logo"
+            referrerPolicy="no-referrer"
+            className="w-7 h-7 rounded-full object-cover ring-1 ring-[#edbd9b]/40"
+          />
+          <span className="font-serif text-xl text-[#edbd9b] font-medium">Elevva</span>
           <span className="text-[10px] uppercase tracking-wider bg-[#2e2926] px-2 py-0.5 rounded text-[#e0bfbf]">
             Admin
           </span>
@@ -68,13 +74,21 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
         <div className="flex flex-col gap-8">
           {/* Brand header */}
           <div className="flex items-center justify-between">
-            <div>
-              <span className="font-serif text-2xl text-[#edbd9b] tracking-wider font-semibold">
-                Alzza
-              </span>
-              <p className="text-[10px] uppercase tracking-widest text-[#e0bfbf] font-medium mt-0.5">
-                Panel de Administración
-              </p>
+            <div className="flex items-center gap-3">
+              <img
+                src="/src/assets/images/elevva_logo_emblem_1791482529055.jpg"
+                alt="Elevva Logo"
+                referrerPolicy="no-referrer"
+                className="w-10 h-10 rounded-full object-cover ring-1 ring-[#edbd9b]/40 shadow-sm shrink-0"
+              />
+              <div>
+                <span className="font-serif text-2xl text-[#edbd9b] tracking-wider font-semibold">
+                  Elevva
+                </span>
+                <p className="text-[10px] uppercase tracking-widest text-[#e0bfbf] font-medium mt-0.5">
+                  Panel de Administración
+                </p>
+              </div>
             </div>
             <div className="w-9 h-9 rounded-xl bg-[#2e2926] border border-[#584141]/50 flex items-center justify-center text-[#edbd9b]">
               <Shield className="w-4 h-4" />

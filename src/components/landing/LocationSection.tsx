@@ -127,7 +127,7 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ onOpenReservat
                 <div className="w-12 h-12 rounded-full bg-[#9b1b30] flex items-center justify-center text-white mb-3 shadow-lg animate-bounce">
                   <MapPin className="w-6 h-6" />
                 </div>
-                <p className="font-serif text-xl text-[#eae1dc] font-semibold">Alzza Encarnación</p>
+                <p className="font-serif text-xl text-[#eae1dc] font-semibold">Elevva Encarnación</p>
                 <p className="text-xs text-[#e0bfbf] mt-1">Shopping de Encarnación, Nivel Terraza</p>
                 <span className="mt-3 px-3 py-1 rounded-full bg-[#613f26] text-[#ffdcc4] text-[10px] uppercase tracking-widest font-mono">
                   27°20'00"S 55°52'00"W

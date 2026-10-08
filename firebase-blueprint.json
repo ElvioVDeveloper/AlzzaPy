@@ -75,7 +75,7 @@
         },
         "badge": {
           "type": "string",
-          "description": "Highlight badge or label (e.g. Firma Alzza, Recomendado)",
+          "description": "Highlight badge or label (e.g. Firma Elevva, Recomendado)",
           "maxLength": 60
         },
         "tag": {

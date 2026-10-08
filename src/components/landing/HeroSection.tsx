@@ -37,9 +37,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenReservation }) =
           <div className="lg:col-span-7 flex flex-col items-start gap-5">
             <div className="flex items-center gap-3">
               <img
-                alt="Alzza Isologo"
+                alt="Elevva Isologo"
                 className="w-12 h-12 rounded-full object-cover shadow-md ring-1 ring-[#edbd9b]/40"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuADPmGf7b6_gRqfXg-ZIcAhnzbBp6YqqlUG28YHwBypikJ5TBsNqI0Pt6fwsu1TiR6hYFFT2wori6lBDgyta-U4OLjP-Qly2PUUq-9jMtQi_igmQdY0YWH_KQAangv5wD9N-C7eyKfQAQCAotkHcIk-ABD8r--KQTqor12HKi-6LcwKCU-kOa4nGy_wqJZiFXCNbcJwBmhlpwre07HPT_TWU7wyQkSSaSnkY-2aksr6bhTo7qfIzpnoELDVUNm1yXkC"
+                src="/src/assets/images/elevva_logo_emblem_1791482529055.jpg"
+                referrerPolicy="no-referrer"
               />
               <span className="text-[11px] uppercase tracking-[0.25em] text-[#edbd9b] font-medium">
                 Salon &amp; Rooftop Experience
@@ -58,7 +59,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenReservation }) =
             {/* CTAs */}
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <a
-                href="https://wa.me/595985100935?text=Hola%20Alzza,%20quisiera%20reservar%20una%20mesa"
+                href="https://wa.me/595985100935?text=Hola%20Elevva,%20quisiera%20reservar%20una%20mesa"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2.5 px-6 py-3 rounded-lg bg-[#9b1b30] text-white text-[12px] uppercase tracking-wider font-medium shadow-xl hover:bg-[#b8243c] hover:shadow-[0_4px_24px_rgba(155,27,48,0.55)] transition-all"
@@ -98,7 +99,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenReservation }) =
             <div className="relative rounded-2xl overflow-hidden bg-[#231f1c] p-2.5 border border-[#C89B7B]/30 shadow-2xl group">
               <div className="relative w-full h-[380px] sm:h-[460px] rounded-xl overflow-hidden">
                 <img
-                  alt="Cóctel de autor en barra Alzza"
+                  alt="Cóctel de autor en barra Elevva"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuApUl6XrYrriDwV6Jqc9nAALV4LWJo73X4Wr7jXReV7r6N2XQLKSHAwUbcJuJo4SlsVYM-pqXqHovLThJ0VYLmlfkOSJWxa5Pu3mPhMtspn13sh3lS9jf3Frc9mr4zc_qkBpOQAXaAGsd3JN513UR4xJaa2eCyjpXyycAyIWgJ08tFNkPLqI2UEDQc7Kvfr66L2Vr1uKHZoZESGdPSMuF1iFjF6GA2gm_fZdxFxdN6Nl7x7kd-lO3M"
                 />
@@ -111,7 +112,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenReservation }) =
                       Coctel de Temporada
                     </span>
                     <span className="font-serif text-lg sm:text-xl text-[#eae1dc] font-medium">
-                      Negroni Ahumado Alzza
+                      Negroni Ahumado Elevva
                     </span>
                   </div>
                   <div className="w-10 h-10 rounded-full bg-[#9b1b30] flex items-center justify-center text-white shadow-md">

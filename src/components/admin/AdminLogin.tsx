@@ -54,10 +54,15 @@ export const AdminLogin: React.FC<AdminLoginProps> = ({ onNavigate }) => {
       <div className="w-full max-w-md bg-[#1f1b18] border border-[#C89B7B]/30 rounded-2xl p-8 shadow-2xl relative z-10">
         {/* Brand Header */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#2e2926] border border-[#C89B7B]/40 text-[#edbd9b] mb-4 shadow-lg">
-            <Lock className="w-7 h-7" />
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#2e2926] border border-[#C89B7B]/40 mb-4 shadow-xl overflow-hidden p-1">
+            <img
+              src="/src/assets/images/elevva_logo_emblem_1791482529055.jpg"
+              alt="Elevva"
+              referrerPolicy="no-referrer"
+              className="w-full h-full rounded-xl object-cover"
+            />
           </div>
-          <h1 className="font-serif text-3xl text-[#eae1dc] font-semibold">Alzza Admin</h1>
+          <h1 className="font-serif text-3xl text-[#eae1dc] font-semibold">Elevva Admin</h1>
           <p className="text-xs uppercase tracking-widest text-[#edbd9b] mt-1 font-medium">
             Panel Privado para Socios &amp; Dirección
           </p>
@@ -86,7 +91,7 @@ export const AdminLogin: React.FC<AdminLoginProps> = ({ onNavigate }) => {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="admin@alzza.com.py"
+                placeholder="admin@elevva.com.py"
                 className="w-full pl-10 pr-4 py-3 rounded-xl bg-[#171310] border border-[#584141]/50 text-[#eae1dc] placeholder-[#584141] focus:outline-none focus:border-[#edbd9b] text-sm"
               />
               <Mail className="w-4 h-4 text-[#584141] absolute left-3.5 top-3.5" />

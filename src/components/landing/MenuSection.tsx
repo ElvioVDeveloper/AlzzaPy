@@ -96,7 +96,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
 
             {/* Separate Dedicated Button for WhatsApp Reservations */}
             <a
-              href="https://wa.me/595985100935?text=Hola%20Alzza,%20quisiera%20consultar%20por%20la%20carta%20y%20hacer%20una%20reserva"
+              href="https://wa.me/595985100935?text=Hola%20Elevva,%20quisiera%20consultar%20por%20la%20carta%20y%20hacer%20una%20reserva"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[#9b1b30] text-white text-[12px] uppercase tracking-wider font-semibold hover:bg-[#b8243c] transition-colors border border-[#C89B7B]/40 shadow-sm"

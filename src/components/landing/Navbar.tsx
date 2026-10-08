@@ -119,8 +119,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenReservation }) => {
             }}
             className="flex items-center gap-3 group"
           >
+            <img
+              src="/src/assets/images/elevva_logo_emblem_1791482529055.jpg"
+              alt="Elevva Logo"
+              referrerPolicy="no-referrer"
+              className="w-10 h-10 rounded-full object-cover ring-1 ring-[#edbd9b]/50 shadow-md group-hover:scale-105 transition-transform"
+            />
             <span className="font-serif text-2xl tracking-wider text-[#edbd9b] group-hover:text-[#ffdcc4] transition-colors font-medium">
-              Alzza
+              Elevva
             </span>
             <span className="hidden sm:inline-block w-px h-4 bg-[#584141]"></span>
             <span className="hidden sm:inline-block text-[10px] uppercase tracking-[0.2em] text-[#e0bfbf]/80 font-medium">

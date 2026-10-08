@@ -141,7 +141,7 @@ export const AdminProductModal: React.FC<AdminProductModalProps> = ({
               <input
                 type="text"
                 required
-                placeholder="Ej. Alzza Florece"
+                placeholder="Ej. Elevva Florece"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 className="w-full px-4 py-2.5 rounded-xl bg-[#171310] border border-[#584141]/50 text-[#eae1dc] placeholder-[#584141] focus:outline-none focus:border-[#edbd9b] text-sm"
@@ -223,7 +223,7 @@ export const AdminProductModal: React.FC<AdminProductModalProps> = ({
               </label>
               <input
                 type="text"
-                placeholder="Ej. Firma Alzza, Recomendado, Exclusivo"
+                placeholder="Ej. Firma Elevva, Recomendado, Exclusivo"
                 value={badge}
                 onChange={(e) => setBadge(e.target.value)}
                 className="w-full px-4 py-2 rounded-xl bg-[#171310] border border-[#584141]/50 text-[#eae1dc] placeholder-[#584141] focus:outline-none focus:border-[#edbd9b] text-sm"
@@ -248,7 +248,7 @@ export const AdminProductModal: React.FC<AdminProductModalProps> = ({
           <div className="space-y-3 pt-2">
             <div className="flex items-center justify-between">
               <label className="block text-[11px] uppercase tracking-wider text-[#edbd9b] font-semibold">
-                Imagen del Producto (URL o Galería Alzza)
+                Imagen del Producto (URL o Galería Elevva)
               </label>
               <span className="text-[10px] text-[#e0bfbf]">Previsualización en vivo</span>
             </div>
