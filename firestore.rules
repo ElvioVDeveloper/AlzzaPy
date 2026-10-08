@@ -85,6 +85,13 @@ service cloud.firestore {
       allow delete: if isAdmin();
     }
 
+    // Settings collection (custom branding / logo, readable by public visitors, editable by admins)
+    match /settings/{settingId} {
+      allow get, list: if true;
+      allow create, update: if isAdmin();
+      allow delete: if isAdmin();
+    }
+
     // Connection health check
     match /test/connection {
       allow read: if true;

@@ -12,10 +12,11 @@ import {
   Sparkles,
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
+import { useBranding } from '../../context/BrandingContext';
 
 interface AdminLayoutProps {
-  currentTab: 'dashboard' | 'products' | 'categories' | 'profile';
-  onSelectTab: (tab: 'dashboard' | 'products' | 'categories' | 'profile') => void;
+  currentTab: 'dashboard' | 'products' | 'categories' | 'branding' | 'profile';
+  onSelectTab: (tab: 'dashboard' | 'products' | 'categories' | 'branding' | 'profile') => void;
   onNavigateLanding: () => void;
   children: React.ReactNode;
 }
@@ -27,6 +28,7 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
   children,
 }) => {
   const { user, adminData, logout } = useAuth();
+  const { logoUrl, brandName } = useBranding();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleLogout = async () => {
@@ -38,6 +40,7 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
     { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
     { id: 'products', label: 'Servicios & Productos', icon: Utensils },
     { id: 'categories', label: 'Categorías', icon: Tag },
+    { id: 'branding', label: 'Identidad & Logo', icon: Sparkles },
     { id: 'profile', label: 'Perfil de Socio', icon: User },
   ] as const;
 
@@ -47,12 +50,15 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
       <div className="md:hidden bg-[#1f1b18] border-b border-[#584141]/40 px-4 py-3 flex items-center justify-between sticky top-0 z-40">
         <div className="flex items-center gap-2.5">
           <img
-            src="/src/assets/images/elevva_logo_emblem_1791482529055.jpg"
-            alt="Elevva Logo"
+            src={logoUrl || '/elevva-logo.jpg'}
+            alt={`${brandName} Logo`}
             referrerPolicy="no-referrer"
+            onError={(e) => {
+              (e.target as HTMLImageElement).src = '/elevva-logo.jpg';
+            }}
             className="w-7 h-7 rounded-full object-cover ring-1 ring-[#edbd9b]/40"
           />
-          <span className="font-serif text-xl text-[#edbd9b] font-medium">Elevva</span>
+          <span className="font-serif text-xl text-[#edbd9b] font-medium">{brandName}</span>
           <span className="text-[10px] uppercase tracking-wider bg-[#2e2926] px-2 py-0.5 rounded text-[#e0bfbf]">
             Admin
           </span>
@@ -76,14 +82,17 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <img
-                src="/src/assets/images/elevva_logo_emblem_1791482529055.jpg"
-                alt="Elevva Logo"
+                src={logoUrl || '/elevva-logo.jpg'}
+                alt={`${brandName} Logo`}
                 referrerPolicy="no-referrer"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = '/elevva-logo.jpg';
+                }}
                 className="w-10 h-10 rounded-full object-cover ring-1 ring-[#edbd9b]/40 shadow-sm shrink-0"
               />
               <div>
                 <span className="font-serif text-2xl text-[#edbd9b] tracking-wider font-semibold">
-                  Elevva
+                  {brandName}
                 </span>
                 <p className="text-[10px] uppercase tracking-widest text-[#e0bfbf] font-medium mt-0.5">
                   Panel de Administración

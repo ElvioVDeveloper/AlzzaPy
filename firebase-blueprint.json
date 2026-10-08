@@ -143,6 +143,29 @@
         }
       },
       "required": ["name", "slug", "order", "status"]
+    },
+    "Setting": {
+      "title": "Setting",
+      "description": "System and branding configuration settings including logo",
+      "type": "object",
+      "properties": {
+        "logoUrl": {
+          "type": "string",
+          "description": "Image URL or data URI of the active logo"
+        },
+        "brandName": {
+          "type": "string",
+          "description": "Brand name"
+        },
+        "tagline": {
+          "type": "string",
+          "description": "Tagline or subtitle"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "Last update timestamp"
+        }
+      }
     }
   },
   "firestore": {
@@ -157,6 +180,10 @@
     "/categories/{categoryId}": {
       "schema": "Category",
       "description": "Menu categories defining filter tabs and navigation order"
+    },
+    "/settings/{settingId}": {
+      "schema": "Setting",
+      "description": "Global application branding and settings"
     }
   }
 }

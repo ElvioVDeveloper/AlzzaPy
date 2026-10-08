@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Lock, Mail, ArrowRight, ShieldCheck, AlertCircle } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
+import { useBranding } from '../../context/BrandingContext';
 
 interface AdminLoginProps {
   onNavigate: (route: string) => void;
@@ -8,6 +9,7 @@ interface AdminLoginProps {
 
 export const AdminLogin: React.FC<AdminLoginProps> = ({ onNavigate }) => {
   const { loginWithEmail, loginWithGoogle, error, clearError } = useAuth();
+  const { logoUrl, brandName } = useBranding();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
@@ -56,13 +58,16 @@ export const AdminLogin: React.FC<AdminLoginProps> = ({ onNavigate }) => {
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#2e2926] border border-[#C89B7B]/40 mb-4 shadow-xl overflow-hidden p-1">
             <img
-              src="/src/assets/images/elevva_logo_emblem_1791482529055.jpg"
-              alt="Elevva"
+              src={logoUrl || '/elevva-logo.jpg'}
+              alt={brandName}
               referrerPolicy="no-referrer"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = '/elevva-logo.jpg';
+              }}
               className="w-full h-full rounded-xl object-cover"
             />
           </div>
-          <h1 className="font-serif text-3xl text-[#eae1dc] font-semibold">Elevva Admin</h1>
+          <h1 className="font-serif text-3xl text-[#eae1dc] font-semibold">{brandName} Admin</h1>
           <p className="text-xs uppercase tracking-widest text-[#edbd9b] mt-1 font-medium">
             Panel Privado para Socios &amp; Dirección
           </p>

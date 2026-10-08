@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { UserPlus, Mail, Lock, User, ArrowRight, AlertCircle, ArrowLeft } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
+import { useBranding } from '../../context/BrandingContext';
 
 interface AdminRegisterProps {
   onNavigate: (route: string) => void;
@@ -8,6 +9,7 @@ interface AdminRegisterProps {
 
 export const AdminRegister: React.FC<AdminRegisterProps> = ({ onNavigate }) => {
   const { registerWithEmail, error, clearError } = useAuth();
+  const { logoUrl, brandName } = useBranding();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -59,15 +61,18 @@ export const AdminRegister: React.FC<AdminRegisterProps> = ({ onNavigate }) => {
         <div className="text-center mb-6">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#2e2926] border border-[#C89B7B]/40 mb-4 shadow-xl overflow-hidden p-1">
             <img
-              src="/src/assets/images/elevva_logo_emblem_1791482529055.jpg"
-              alt="Elevva"
+              src={logoUrl || '/elevva-logo.jpg'}
+              alt={brandName}
               referrerPolicy="no-referrer"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = '/elevva-logo.jpg';
+              }}
               className="w-full h-full rounded-xl object-cover"
             />
           </div>
           <h1 className="font-serif text-3xl text-[#eae1dc] font-semibold">Registro de Socio</h1>
           <p className="text-xs uppercase tracking-widest text-[#edbd9b] mt-1 font-medium">
-            Elevva Rooftop Experience
+            {brandName} Rooftop Experience
           </p>
           <p className="text-xs text-[#e0bfbf] mt-2">
             Crea tu credencial autorizada para gestionar la plataforma comercial.

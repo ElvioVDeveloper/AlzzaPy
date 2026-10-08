@@ -1,11 +1,13 @@
 import React from 'react';
 import { MessageSquare, BookOpen, Clock, MapPin, Phone, Wine } from 'lucide-react';
+import { useBranding } from '../../context/BrandingContext';
 
 interface HeroSectionProps {
   onOpenReservation: () => void;
 }
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenReservation }) => {
+  const { logoUrl, brandName } = useBranding();
   const scrollToMenu = () => {
     const el = document.getElementById('menu') || document.getElementById('carta-menu');
     if (el) {
@@ -37,10 +39,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenReservation }) =
           <div className="lg:col-span-7 flex flex-col items-start gap-5">
             <div className="flex items-center gap-3">
               <img
-                alt="Elevva Isologo"
+                alt={`${brandName} Isologo`}
                 className="w-12 h-12 rounded-full object-cover shadow-md ring-1 ring-[#edbd9b]/40"
-                src="/src/assets/images/elevva_logo_emblem_1791482529055.jpg"
+                src={logoUrl || '/elevva-logo.jpg'}
                 referrerPolicy="no-referrer"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = '/elevva-logo.jpg';
+                }}
               />
               <span className="text-[11px] uppercase tracking-[0.25em] text-[#edbd9b] font-medium">
                 Salon &amp; Rooftop Experience

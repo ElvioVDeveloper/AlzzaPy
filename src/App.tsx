@@ -40,10 +40,12 @@ import { AdminDashboard } from './components/admin/AdminDashboard';
 import { AdminProducts } from './components/admin/AdminProducts';
 import { AdminCategories } from './components/admin/AdminCategories';
 import { AdminProfile } from './components/admin/AdminProfile';
+import { AdminBranding } from './components/admin/AdminBranding';
 import { AdminProductModal } from './components/admin/AdminProductModal';
 import { AdminDeleteModal } from './components/admin/AdminDeleteModal';
 import { AdminCategoryModal } from './components/admin/AdminCategoryModal';
 import { AdminCategoryDeleteModal } from './components/admin/AdminCategoryDeleteModal';
+import { BrandingProvider } from './context/BrandingContext';
 import { CheckCircle2 } from 'lucide-react';
 
 function AppContent() {
@@ -417,9 +419,10 @@ function AppContent() {
       );
     }
 
-    let adminTab: 'dashboard' | 'products' | 'categories' | 'profile' = 'dashboard';
+    let adminTab: 'dashboard' | 'products' | 'categories' | 'branding' | 'profile' = 'dashboard';
     if (currentPath === '/admin/products') adminTab = 'products';
     if (currentPath === '/admin/categories') adminTab = 'categories';
+    if (currentPath === '/admin/branding') adminTab = 'branding';
     if (currentPath === '/admin/profile') adminTab = 'profile';
 
     // Products assigned to the category selected for deletion
@@ -499,6 +502,10 @@ function AppContent() {
               onToggleStatus={handleToggleCategoryStatus}
               onReorderCategory={handleReorderCategory}
             />
+          )}
+
+          {adminTab === 'branding' && (
+            <AdminBranding onNotify={showToast} />
           )}
 
           {adminTab === 'profile' && (
@@ -628,7 +635,9 @@ function AppContent() {
 export default function App() {
   return (
     <AuthProvider>
-      <AppContent />
+      <BrandingProvider>
+        <AppContent />
+      </BrandingProvider>
     </AuthProvider>
   );
 }

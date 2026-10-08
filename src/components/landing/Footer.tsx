@@ -1,24 +1,29 @@
 import React from 'react';
 import { Lock } from 'lucide-react';
+import { useBranding } from '../../context/BrandingContext';
 
 interface FooterProps {
   onNavigateToAdmin: () => void;
 }
 
 export const Footer: React.FC<FooterProps> = ({ onNavigateToAdmin }) => {
+  const { logoUrl, brandName } = useBranding();
   return (
     <footer className="w-full bg-[#110d0b] border-t border-[#C89B7B]/20 py-12">
       <div className="w-full px-4 sm:px-6 lg:px-8 max-w-[1440px] mx-auto flex flex-col gap-8">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-8 border-b border-[#584141]/30">
           <div className="flex items-center gap-3.5">
             <img
-              src="/src/assets/images/elevva_logo_emblem_1791482529055.jpg"
-              alt="Elevva Logo"
+              src={logoUrl || '/elevva-logo.jpg'}
+              alt={`${brandName} Logo`}
               referrerPolicy="no-referrer"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = '/elevva-logo.jpg';
+              }}
               className="w-12 h-12 rounded-full object-cover ring-1 ring-[#edbd9b]/40 shadow-sm shrink-0"
             />
             <div>
-              <h2 className="font-serif text-2xl text-[#edbd9b] tracking-wide font-medium">Elevva</h2>
+              <h2 className="font-serif text-2xl text-[#edbd9b] tracking-wide font-medium">{brandName}</h2>
               <p className="text-xs sm:text-sm text-[#e0bfbf] mt-0.5 font-light">
                 Gastronomía &amp; Coctelería de Altura — Shopping de Encarnación
               </p>
