@@ -26,22 +26,22 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
   );
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#110d0b]/85 backdrop-blur-md animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-[#110d0b]/85 backdrop-blur-md animate-in fade-in duration-200 overflow-y-auto">
       <div
-        className="relative w-full max-w-2xl bg-[#1f1b18] border border-[#C89B7B]/40 rounded-2xl overflow-hidden shadow-2xl animate-in zoom-in-95 duration-200"
+        className="relative w-full max-w-2xl bg-[#1f1b18] border border-[#C89B7B]/40 rounded-2xl overflow-hidden shadow-2xl animate-in zoom-in-95 duration-200 my-auto max-h-[92vh] flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-[#110d0b]/80 border border-[#584141]/50 text-[#edbd9b] hover:text-white hover:bg-[#9b1b30] flex items-center justify-center transition-all cursor-pointer"
+          className="absolute top-3 right-3 sm:top-4 sm:right-4 z-10 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#110d0b]/80 border border-[#584141]/50 text-[#edbd9b] hover:text-white hover:bg-[#9b1b30] flex items-center justify-center transition-all cursor-pointer"
         >
-          <X className="w-5 h-5" />
+          <X className="w-4 h-4 sm:w-5 sm:h-5" />
         </button>
 
         {/* Media Banner */}
         {productImage && (
-          <div className="relative w-full h-64 sm:h-72 bg-[#171310] overflow-hidden">
+          <div className="relative w-full h-48 sm:h-72 bg-[#171310] overflow-hidden shrink-0">
             <img
               src={productImage}
               alt={productName}
@@ -50,7 +50,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
             <div className="absolute inset-0 bg-gradient-to-t from-[#1f1b18] via-transparent to-transparent"></div>
 
             {product.badge && (
-              <span className="absolute top-4 left-4 px-3.5 py-1.5 rounded-full bg-[#9b1b30] text-white text-[11px] uppercase tracking-widest font-semibold shadow-lg">
+              <span className="absolute top-3 left-3 sm:top-4 sm:left-4 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-[#9b1b30] text-white text-[10px] sm:text-[11px] uppercase tracking-widest font-semibold shadow-lg">
                 {product.badge}
               </span>
             )}
@@ -58,7 +58,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
         )}
 
         {/* Details Body */}
-        <div className="p-6 sm:p-8 flex flex-col gap-6">
+        <div className="p-4 sm:p-8 flex flex-col gap-4 sm:gap-6 overflow-y-auto">
           <div>
             <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
               <span className="text-[11px] uppercase tracking-widest text-[#edbd9b] font-medium flex items-center gap-1.5">
@@ -97,7 +97,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
           {/* Action CTAs */}
           <div className="pt-4 border-t border-[#584141]/30 flex flex-col sm:flex-row items-center gap-3">
             <a
-              href={`https://wa.me/595985100935?text=${whatsappMessage}`}
+              href={`https://wa.me/5491188889999?text=${whatsappMessage}`}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-[#9b1b30] text-white text-[12px] uppercase tracking-wider font-semibold hover:bg-[#b8243c] shadow-lg transition-all"

@@ -40,23 +40,23 @@ export const ReservationModal: React.FC<ReservationModalProps> = ({
       `\nEnviado desde la Web Elevva.`
     );
 
-    window.open(`https://wa.me/595985100935?text=${formattedMessage}`, '_blank');
+    window.open(`https://wa.me/5491188889999?text=${formattedMessage}`, '_blank');
     onClose();
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#110d0b]/85 backdrop-blur-md animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-[#110d0b]/85 backdrop-blur-md animate-in fade-in duration-200 overflow-y-auto">
       <div
-        className="relative w-full max-w-lg bg-[#1f1b18] border border-[#C89B7B]/40 rounded-2xl overflow-hidden shadow-2xl animate-in zoom-in-95 duration-200"
+        className="relative w-full max-w-lg bg-[#1f1b18] border border-[#C89B7B]/40 rounded-2xl overflow-hidden shadow-2xl animate-in zoom-in-95 duration-200 my-auto max-h-[92vh] flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="p-6 bg-[#231f1c] border-b border-[#584141]/40 flex items-center justify-between">
+        <div className="p-4 sm:p-6 bg-[#231f1c] border-b border-[#584141]/40 flex items-center justify-between shrink-0">
           <div>
             <span className="text-[10px] uppercase tracking-widest text-[#edbd9b] font-semibold">
               Shopping de Encarnación
             </span>
-            <h3 className="font-serif text-2xl text-[#eae1dc] font-medium">Reservar Mesa</h3>
+            <h3 className="font-serif text-xl sm:text-2xl text-[#eae1dc] font-medium">Reservar Mesa</h3>
           </div>
           <button
             onClick={onClose}
@@ -67,7 +67,7 @@ export const ReservationModal: React.FC<ReservationModalProps> = ({
         </div>
 
         {/* Form */}
-        <form onSubmit={handleSubmit} className="p-6 space-y-4">
+        <form onSubmit={handleSubmit} className="p-4 sm:p-6 space-y-3.5 sm:space-y-4 overflow-y-auto">
           <div>
             <label className="block text-[11px] uppercase tracking-wider text-[#edbd9b] font-semibold mb-1">
               Nombre Completo *
@@ -89,7 +89,7 @@ export const ReservationModal: React.FC<ReservationModalProps> = ({
             <input
               type="tel"
               required
-              placeholder="+595 985 000 000"
+              placeholder="+54 9 11 8888 9999"
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
               className="w-full px-4 py-2.5 rounded-lg bg-[#171310] border border-[#584141]/50 text-[#eae1dc] placeholder-[#584141] focus:outline-none focus:border-[#edbd9b] text-sm"

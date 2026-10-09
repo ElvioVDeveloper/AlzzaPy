@@ -65,19 +65,28 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
         </div>
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="p-2 text-[#edbd9b]"
+          className="p-2 text-[#edbd9b] hover:text-white rounded-lg cursor-pointer"
+          aria-label={mobileMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
         >
           {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
+      {/* Mobile Drawer Backdrop */}
+      {mobileMenuOpen && (
+        <div
+          className="fixed inset-0 bg-black/70 backdrop-blur-sm z-40 md:hidden"
+          onClick={() => setMobileMenuOpen(false)}
+        />
+      )}
+
       {/* Sidebar (Desktop + Mobile Drawer) */}
       <aside
-        className={`fixed md:sticky top-0 left-0 h-screen w-72 bg-[#171310] border-r border-[#C89B7B]/20 flex flex-col justify-between p-6 z-50 transition-transform duration-300 ${
+        className={`fixed md:sticky top-0 left-0 h-screen w-72 max-w-[85vw] bg-[#171310] border-r border-[#C89B7B]/20 flex flex-col justify-between p-5 sm:p-6 z-50 transition-transform duration-300 shadow-2xl ${
           mobileMenuOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'
         }`}
       >
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-6 sm:gap-8">
           {/* Brand header */}
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -99,9 +108,12 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
                 </p>
               </div>
             </div>
-            <div className="w-9 h-9 rounded-xl bg-[#2e2926] border border-[#584141]/50 flex items-center justify-center text-[#edbd9b]">
-              <Shield className="w-4 h-4" />
-            </div>
+            <button
+              onClick={() => setMobileMenuOpen(false)}
+              className="md:hidden p-1.5 rounded-lg text-[#e0bfbf] hover:text-white hover:bg-[#2e2926]"
+            >
+              <X className="w-5 h-5" />
+            </button>
           </div>
 
           {/* User badge */}

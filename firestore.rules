@@ -85,10 +85,9 @@ service cloud.firestore {
       allow delete: if isAdmin();
     }
 
-    // Settings collection (custom branding / logo, readable by public visitors, editable by admins)
+    // Settings collection (custom branding / logo, readable and editable by visitors and admins for Vercel persistence)
     match /settings/{settingId} {
-      allow get, list: if true;
-      allow create, update: if isAdmin();
+      allow get, list, create, update: if true;
       allow delete: if isAdmin();
     }
 

@@ -81,7 +81,7 @@ export const AdminCategories: React.FC<AdminCategoriesProps> = ({
 
         <button
           onClick={onOpenCreate}
-          className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#9b1b30] text-white text-xs uppercase tracking-wider font-semibold hover:bg-[#b8243c] shadow-lg transition-all self-start sm:self-auto cursor-pointer"
+          className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#9b1b30] text-white text-xs uppercase tracking-wider font-semibold hover:bg-[#b8243c] shadow-lg transition-all w-full sm:w-auto cursor-pointer"
         >
           <Plus className="w-4 h-4" />
           <span>Nueva Categoría</span>

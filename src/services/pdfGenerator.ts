@@ -312,7 +312,7 @@ export async function generateMenuPDF(
     doc.setFontSize(7.5);
     doc.setTextColor(...COLOR_MUTED);
     doc.text(
-      'Shopping de Encarnación  •  WhatsApp: +595 985 100 935  •  Instagram: @elevva.py',
+      'Shopping de Encarnación  •  WhatsApp: +54 9 11 8888 9999  •  Instagram: @elevva.py',
       marginX,
       footerY
     );

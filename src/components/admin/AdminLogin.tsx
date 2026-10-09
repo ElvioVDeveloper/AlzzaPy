@@ -53,7 +53,7 @@ export const AdminLogin: React.FC<AdminLoginProps> = ({ onNavigate }) => {
       <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#9b1b30]/20 rounded-full blur-[120px] pointer-events-none"></div>
       <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-[#613f26]/20 rounded-full blur-[120px] pointer-events-none"></div>
 
-      <div className="w-full max-w-md bg-[#1f1b18] border border-[#C89B7B]/30 rounded-2xl p-8 shadow-2xl relative z-10">
+      <div className="w-full max-w-md bg-[#1f1b18] border border-[#C89B7B]/30 rounded-2xl p-6 sm:p-8 shadow-2xl relative z-10">
         {/* Brand Header */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#2e2926] border border-[#C89B7B]/40 mb-4 shadow-xl overflow-hidden p-1">

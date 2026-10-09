@@ -57,29 +57,29 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
   };
 
   return (
-    <section id="menu" className="w-full bg-[#110d0b] py-16 lg:py-24 relative scroll-mt-20">
+    <section id="menu" className="w-full bg-[#110d0b] py-12 sm:py-16 lg:py-24 relative scroll-mt-20">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-10">
           <div>
-            <span className="text-[11px] uppercase tracking-[0.25em] text-[#edbd9b] font-medium">
+            <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[#edbd9b] font-medium">
               Selección Gastronómica &amp; Barra
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#eae1dc] tracking-tight mt-1">
+            <h2 className="font-serif text-2xl sm:text-4xl lg:text-5xl text-[#eae1dc] tracking-tight mt-1">
               Nuestra Carta de Autor
             </h2>
-            <p className="text-[#e0bfbf] text-sm sm:text-base mt-2 max-w-[620px] font-light">
+            <p className="text-[#e0bfbf] text-xs sm:text-base mt-2 max-w-[620px] font-light">
               Creaciones diseñadas por nuestro equipo de mixólogos y chefs ejecutivos. Ingredientes autóctonos con técnica de alta cocina internacional.
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center gap-3 self-start md:self-auto">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full md:w-auto">
             {/* Dynamic PDF Download Button */}
             <button
               type="button"
               onClick={handleDownloadPDF}
               disabled={isGeneratingPDF}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#2e2926] text-[#edbd9b] text-[12px] uppercase tracking-wider font-semibold hover:bg-[#3d3835] hover:text-white transition-all border border-[#584141]/50 shadow-sm cursor-pointer disabled:opacity-60 disabled:cursor-wait"
+              className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 rounded-lg bg-[#2e2926] text-[#edbd9b] text-[11px] sm:text-[12px] uppercase tracking-wider font-semibold hover:bg-[#3d3835] hover:text-white transition-all border border-[#584141]/50 shadow-sm cursor-pointer disabled:opacity-60 disabled:cursor-wait text-center w-full sm:w-auto"
             >
               {isGeneratingPDF ? (
                 <>
@@ -89,26 +89,26 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
               ) : (
                 <>
                   <FileText className="w-4 h-4 text-[#edbd9b]" />
-                  <span>Descargar Carta Completa (PDF)</span>
+                  <span>Descargar Carta (PDF)</span>
                 </>
               )}
             </button>
 
             {/* Separate Dedicated Button for WhatsApp Reservations */}
             <a
-              href="https://wa.me/595985100935?text=Hola%20Elevva,%20quisiera%20consultar%20por%20la%20carta%20y%20hacer%20una%20reserva"
+              href="https://wa.me/5491188889999?text=Hola%20Elevva,%20quisiera%20consultar%20por%20la%20carta%20y%20hacer%20una%20reserva"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[#9b1b30] text-white text-[12px] uppercase tracking-wider font-semibold hover:bg-[#b8243c] transition-colors border border-[#C89B7B]/40 shadow-sm"
+              className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-[#9b1b30] text-white text-[11px] sm:text-[12px] uppercase tracking-wider font-semibold hover:bg-[#b8243c] transition-colors border border-[#C89B7B]/40 shadow-sm text-center w-full sm:w-auto"
             >
-              <MessageSquare className="w-4 h-4" />
+              <MessageSquare className="w-4 h-4 shrink-0" />
               <span>Reservar por WhatsApp</span>
             </a>
           </div>
         </div>
 
-        {/* Category Filter Pills */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-4 scrollbar-none mb-10">
+        {/* Category Filter Pills: Edge-to-edge scroll on mobile */}
+        <div className="flex items-center gap-2 overflow-x-auto pb-3 scrollbar-none mb-8 sm:mb-10 -mx-4 px-4 sm:mx-0 sm:px-0">
           <button
             onClick={() => setSelectedCategory('Todos')}
             className={`px-5 py-2 rounded-full text-[11px] uppercase tracking-wider font-semibold transition-all whitespace-nowrap cursor-pointer ${
@@ -173,7 +173,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
 
         {/* 3-Column Menu Grid: 1 col mobile, 2 cols tablet, 3 cols desktop */}
         {filteredProducts.length > 0 && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
             {filteredProducts.map((product) => {
               const productName = product.name || product.nombre || '';
               const productDesc = product.description || product.descripcion || '';
@@ -188,7 +188,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
                   className="bg-[#231f1c] rounded-2xl overflow-hidden border border-[#584141]/30 shadow-xl hover:-translate-y-1 hover:border-[#edbd9b]/50 transition-all duration-300 flex flex-col h-full cursor-pointer group"
                 >
                   {/* Image container: Uniform proportion */}
-                  <div className="relative w-full h-56 overflow-hidden bg-[#171310] shrink-0">
+                  <div className="relative w-full h-48 sm:h-56 overflow-hidden bg-[#171310] shrink-0">
                     <img
                       alt={productName}
                       className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
@@ -209,7 +209,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
                   </div>
 
                   {/* Card Body with uniform flex stretch */}
-                  <div className="p-6 flex flex-col justify-between flex-grow gap-4">
+                  <div className="p-4 sm:p-6 flex flex-col justify-between flex-grow gap-3.5 sm:gap-4">
                     <div className="space-y-2">
                       {/* [Categoría] */}
                       <div className="flex items-center gap-1.5 text-[10px] uppercase tracking-[0.2em] text-[#edbd9b] font-semibold">

@@ -3,25 +3,25 @@ import { Wine, Utensils, Moon, ArrowRight } from 'lucide-react';
 
 export const ConceptSection: React.FC = () => {
   return (
-    <section id="concepto" className="w-full bg-[#171310] py-16 lg:py-24 relative scroll-mt-20">
+    <section id="concepto" className="w-full bg-[#171310] py-12 sm:py-16 lg:py-24 relative scroll-mt-20">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex flex-col items-center text-center max-w-[760px] mx-auto mb-12">
-          <span className="text-[11px] uppercase tracking-[0.25em] text-[#edbd9b] font-medium mb-2">
+        <div className="flex flex-col items-center text-center max-w-[760px] mx-auto mb-10 sm:mb-12">
+          <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[#edbd9b] font-medium mb-2">
             La Esencia de Elevva
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#eae1dc] tracking-tight">
+          <h2 className="font-serif text-2xl sm:text-4xl lg:text-5xl text-[#eae1dc] tracking-tight">
             Un homenaje a la noche, la técnica y los sentidos
           </h2>
-          <p className="text-[#e0bfbf] text-sm sm:text-base mt-3 leading-relaxed font-light">
+          <p className="text-[#e0bfbf] text-xs sm:text-base mt-3 leading-relaxed font-light">
             Ubicado en el epicentro cosmopolita de Encarnación, Elevva nace para resignificar el ritual de la sobremesa y el after-office. Diseñamos atmósferas que provocan el asombro.
           </p>
         </div>
 
         {/* 3-Column Glass Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
           {/* Card 1 */}
-          <div className="relative bg-[#1f1b18] rounded-2xl p-6 sm:p-8 border border-[#584141]/30 shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
+          <div className="relative bg-[#1f1b18] rounded-2xl p-5 sm:p-8 border border-[#584141]/30 shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
             <div className="flex flex-col gap-4">
               <div className="w-12 h-12 rounded-xl bg-[#2e2926] border border-[#584141]/40 flex items-center justify-center text-[#edbd9b] group-hover:bg-[#9b1b30] group-hover:text-white transition-colors">
                 <Wine className="w-6 h-6" />
@@ -40,7 +40,7 @@ export const ConceptSection: React.FC = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="relative bg-[#1f1b18] rounded-2xl p-6 sm:p-8 border border-[#584141]/30 shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
+          <div className="relative bg-[#1f1b18] rounded-2xl p-5 sm:p-8 border border-[#584141]/30 shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
             <div className="flex flex-col gap-4">
               <div className="w-12 h-12 rounded-xl bg-[#2e2926] border border-[#584141]/40 flex items-center justify-center text-[#edbd9b] group-hover:bg-[#9b1b30] group-hover:text-white transition-colors">
                 <Utensils className="w-6 h-6" />
@@ -59,7 +59,7 @@ export const ConceptSection: React.FC = () => {
           </div>
 
           {/* Card 3 */}
-          <div className="relative bg-[#1f1b18] rounded-2xl p-6 sm:p-8 border border-[#584141]/30 shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
+          <div className="relative bg-[#1f1b18] rounded-2xl p-5 sm:p-8 border border-[#584141]/30 shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
             <div className="flex flex-col gap-4">
               <div className="w-12 h-12 rounded-xl bg-[#2e2926] border border-[#584141]/40 flex items-center justify-center text-[#edbd9b] group-hover:bg-[#9b1b30] group-hover:text-white transition-colors">
                 <Moon className="w-6 h-6" />
